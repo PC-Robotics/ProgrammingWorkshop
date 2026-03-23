@@ -1,2 +1,0 @@
-- name: Auto Approve
-  uses: hmarr/auto-approve-action@v4.0.0
