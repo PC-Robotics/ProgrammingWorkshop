@@ -37,11 +37,9 @@ public class CarterTeleop extends LinearOpMode {
 
             double joystickValue = gamepad1.left_stick_x;
 
-            // Scale the motor power based on the trigger value
             motor.setPower(triggerValue);
             motor.setPower(joystickValue);
 
-            // Display the trigger value and motor power on the telemetry
             telemetry.addData("Stick value  ::  ", joystickValue);
             telemetry.addData("Trigger Value  ::  ", triggerValue);
             telemetry.addData("Motor power  ::  ", motor.getPower());
