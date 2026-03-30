@@ -35,10 +35,12 @@ public class CarterTeleop extends LinearOpMode {
 
             double triggerValue = gamepad1.right_trigger;
 
+
             double joystickValue = gamepad1.left_stick_x;
 
             motor.setPower(triggerValue);
-            motor.setPower(joystickValue);
+            if(joystickValue > 0.05)
+                motor.setPower(joystickValue);
 
             telemetry.addData("Stick value  ::  ", joystickValue);
             telemetry.addData("Trigger Value  ::  ", triggerValue);
@@ -49,6 +51,15 @@ public class CarterTeleop extends LinearOpMode {
 
 
 
+        }
+    }
+
+    public static double deadzone(double input){
+        if(input < 0.05){
+            return input;
+        }
+        else{
+            return 0;
         }
     }
 }
