@@ -16,8 +16,8 @@ public class PK_Testing extends LinearOpMode {
         motor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
 
         waitForStart();
-        motor.setPower(1);
 
+        motor.setPower(1);
         sleep(1000);
         motor.setPower(0);
     }
