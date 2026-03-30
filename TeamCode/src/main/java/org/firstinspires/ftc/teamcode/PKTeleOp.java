@@ -32,6 +32,8 @@ public class PKTeleOp extends LinearOpMode {
             // sets the power based on the x value of the left stick
             double joystickPower = deadzone(gamepad1.left_stick_x);
             motor.setPower(joystickPower);
+
+            telemetry.addData("Motor Power", motor.getPower());
         }
     }
 
